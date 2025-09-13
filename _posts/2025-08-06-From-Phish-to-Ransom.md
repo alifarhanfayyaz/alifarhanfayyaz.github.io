@@ -2,11 +2,10 @@
 title: "From Phish to Ransom: A Practical Analysis of Infostealer-Driven Attacks"
 date: 2025-08-06
 categories:
-  - blog
+  - cybersecurity
 tags:
   - infostealer
   - phishing
-  - cybersecurity
 ---
 
 ![title_image](/assets/1/1-title_image.png)
