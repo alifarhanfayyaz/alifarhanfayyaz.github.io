@@ -17,16 +17,16 @@ This project focused on analyzing a phishing email and its malicious attachment 
 
 **Phase 1: Environment Setup and Email Parsing**
 
-* Automated the extraction process by creating a Python script within a dedicated virtual environment (malware\_analysis) to parse EML files and extract attachments, streamlining future malware analysis cases.
+Automated the extraction process by creating a Python script within a dedicated virtual environment (malware\_analysis) to parse EML files and extract attachments, streamlining future malware analysis cases.
 
 ![enviroment_setup](/assets/1/2-enviroment_setup.png)
 
-* Used ChatGPT to generate a custom Python script that parsed .eml files, extracting metadata, email body, attachments, and SHA-256 hashes.
+Used ChatGPT to generate a custom Python script that parsed .eml files, extracting metadata, email body, attachments, and SHA-256 hashes.
 
 ![python_script_prompt](/assets/1/3-python_script_prompt.png)  
 ![python_script-generation](/assets/1/5-python_script-generation.png)
 
-* AI tools like ChatGPT can help speed up the analysis process, but they’re not perfect. In this case, the first script it gave me messed up the SHA-256 hash of the attachment because of the way it was doing the hashing. I found where the script was going wrong and fixed it by using eml\_parser’s built-in hashing, which gave me the right result and properly decoded and saved the attachments.  
+AI tools like ChatGPT can help speed up the analysis process, but they’re not perfect. In this case, the first script it gave me messed up the SHA-256 hash of the attachment because of the way it was doing the hashing. I found where the script was going wrong and fixed it by using eml\_parser’s built-in hashing, which gave me the right result and properly decoded and saved the attachments.  
     
   **Before**
 
@@ -38,15 +38,15 @@ This project focused on analyzing a phishing email and its malicious attachment 
 
 **Phase 2: Malware Analysis**
 
-* Searched the hash on VirusTotal and observed potential malicious indicators.
+Searched the hash on VirusTotal and observed potential malicious indicators.
 
  ![virustotal_results](/assets/1/8-virustotal_results.png)
 
-* While VirusTotal clearly showed the file was malicious based on multiple detections, it didn’t identify which malware family it belonged to. To dig deeper, I turned to Tria.ge for further analysis.
+While VirusTotal clearly showed the file was malicious based on multiple detections, it didn’t identify which malware family it belonged to. To dig deeper, I turned to Tria.ge for further analysis.
 
- ![tirage_scan](/assets/1/9-tirage_scan.png)
+ ![triage_scan](/assets/1/9-tirage_scan.png)
 
-* Confirmed the malware was AgentTesla, a well-known information stealer that collects sensitive data such as credentials and browser information, often used in phishing campaigns.  
+Confirmed the malware was AgentTesla, a well-known information stealer that collects sensitive data such as credentials and browser information, often used in phishing campaigns.  
   
 
 
