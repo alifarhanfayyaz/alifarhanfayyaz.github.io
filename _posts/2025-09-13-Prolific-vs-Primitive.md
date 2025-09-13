@@ -9,7 +9,8 @@ tags:
   - cybersecurity
 ---
 
-**Objective:**
+
+**Objective**
 
 I will execute a linux-based ransomware known as INC Ransomware in an isolated virtual environment and then analyze its effects — a process known as Dynamic Malware Analysis. I will then compare it with a script-based malware by analyzing the code, which is referred to as Static Malware Analysis.
 
