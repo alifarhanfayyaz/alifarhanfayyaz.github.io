@@ -2,7 +2,7 @@
 title: "Prolific vs Primitive: INC Ransomware Battles a Shell Script Malware"
 date: 2025-09-13
 categories:
-  - cybersecurity
+  - Cyber Security
 tags:
   - ransomware
   - static analysis

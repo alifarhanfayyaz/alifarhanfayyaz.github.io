@@ -71,13 +71,15 @@ plugins:
 author:
   name   : "Farhan Ali"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Toronto-based Cyber Security Professional"
+  bio    : "Toronto-based IT Support Specialist"
   location : "Toronto, CA"
 
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://alifarhanfayyaz.github.io/"
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
+    #   url: "https://alifarhanfayyaz.github.io/"
+    - label: "Resume"
+      url: /assets/resume.pdf
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/"
@@ -100,7 +102,7 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/alifarhanfayyaz"
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-instagram"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/farhan-fayyaz-ali/"
 
 # social:
