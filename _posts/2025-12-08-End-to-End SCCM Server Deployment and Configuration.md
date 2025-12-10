@@ -46,7 +46,7 @@ Post-configuration tasks (boundaries, discovery methods, clients, OSD, etc.) wil
 All software listed above is compatible with Configuration Manager version 2403 (verified).
 
 
-
+<br>
 # 1\. Set Up Active Directory Infrastructure (FA-DC01)
 
 Created a virtual machine, installed Windows Server 2022, added the AD DS role, and promoted the server to a domain controller.
@@ -112,6 +112,8 @@ Created service accounts to be used by SCCM and permissions for service accounts
   ![](/assets/3/adsi_security_2.png)
 
   ![](/assets/3/adsi_security_3.png)
+
+<br>
 
 # 2\. Build SQL \+ Site Server for SCCM (FA-SCCM)
 
@@ -198,8 +200,7 @@ Allow inbound domain traffic for ports: **1433** and **4022**
 
   ![](/assets/3/sql_memory_limit.png)
 
-
-
+<br>
 
 # 3\. Prepare FA-SCCM for SCCM Installation
 
@@ -286,6 +287,7 @@ Within SQL Server Management Studio:
 
   ![](/assets/3/ad_extended.png)
 
+<br>
 
 # 4\. Install System Center Configuration Manager 
 
