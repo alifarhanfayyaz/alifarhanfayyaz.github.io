@@ -113,10 +113,8 @@ Created service accounts to be used by SCCM and permissions for service accounts
 
   ![](/assets/3/adsi_security_3.png)
 
-
-
-
 # 2\. Build SQL \+ Site Server for SCCM (FA-SCCM)
+
 I am using one server for both SQL and SCCM (collocated). This is fine for labs and small organizations but not recommended for large enterprises due to higher I/O requirements which may limit the high availability options.
 
 Installed Windows Server 2022 on a new virtual machine and joined it to the domain.
@@ -337,7 +335,7 @@ Ran **Splash.hta**, installed a Primary Site.
 
 * hman.log
 
-
+<br>
 
 # Related Microsoft Documentation
 
@@ -348,7 +346,7 @@ Ran **Splash.hta**, installed a Primary Site.
 5. **Prepare Active Directory for site publishing:**  [https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/network/extend-the-active-directory-schema](https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/network/extend-the-active-directory-schema)  
 6. **The content library in System Center Configuration Manager (no\_sms\_on\_drive.sms file):** [https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/hierarchy/the-content-library](https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/hierarchy/the-content-library)
 
-
+<br>
 
 # Other References
 
