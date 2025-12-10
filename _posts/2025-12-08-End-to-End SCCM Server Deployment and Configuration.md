@@ -27,7 +27,7 @@ Post-configuration tasks (boundaries, discovery methods, clients, OSD, etc.) wil
 
 | Virtual Component | Description | IP Address |
 | :---- | :---- | :---- |
-| Address Space | Address space used in this lab | 172.16.171.0 |
+| Address Space | Address space used in this lab | 172.16.171.0/24 |
 | FA-DC01 | Domain Controller | 172.16.171.5 |
 | FA-SCCM | SCCM Site Server \+ SQL Server | 172.16.171.10 |
 
@@ -44,6 +44,7 @@ Post-configuration tasks (boundaries, discovery methods, clients, OSD, etc.) wil
 | Configuration Manager 2403 (current branch) | [https://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-endpoint-configuration-manager](https://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-endpoint-configuration-manager) |
 
 All software listed above is compatible with Configuration Manager version 2403 (verified).
+
 
 
 # 1\. Set Up Active Directory Infrastructure (FA-DC01)
@@ -114,8 +115,8 @@ Created service accounts to be used by SCCM and permissions for service accounts
 
 
 
-# 2\. Build SQL \+ Site Server for SCCM (FA-SCCM)
 
+# 2\. Build SQL \+ Site Server for SCCM (FA-SCCM)
 I am using one server for both SQL and SCCM (collocated). This is fine for labs and small organizations but not recommended for large enterprises due to higher I/O requirements which may limit the high availability options.
 
 Installed Windows Server 2022 on a new virtual machine and joined it to the domain.
@@ -198,6 +199,7 @@ Allow inbound domain traffic for ports: **1433** and **4022**
 * Set SQL Min Memory: **80% of RAM**
 
   ![](/assets/3/sql_memory_limit.png)
+
 
 
 
@@ -325,7 +327,7 @@ Ran **Splash.hta**, installed a Primary Site.
 
   ![](/assets/3/sccm_installation_completed.png)
 
-* Set **CMTrace.exe** default log viewer and copy it from source file to a different location so CM updates don’t interfere with its functionality.
+* Set **CMTrace.exe** as default log viewer and copy it from source file to a different location so CM updates don’t interfere with its functionality.
 
 **Helpful logs (Microsoft Configuration Manager\\Logs):**
 
@@ -337,7 +339,6 @@ Ran **Splash.hta**, installed a Primary Site.
 
 
 
-
 # Related Microsoft Documentation
 
 1. **Site and site system prerequisites for System Center Configuration Manager:** [https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/configs/site-and-site-system-prerequisites](https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/configs/site-and-site-system-prerequisites)  
@@ -346,6 +347,7 @@ Ran **Splash.hta**, installed a Primary Site.
 4. **Supported Active Directory domains for System Center Configuration Manager:** [https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/configs/support-for-active-directory-domains](https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/configs/support-for-active-directory-domains)  
 5. **Prepare Active Directory for site publishing:**  [https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/network/extend-the-active-directory-schema](https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/network/extend-the-active-directory-schema)  
 6. **The content library in System Center Configuration Manager (no\_sms\_on\_drive.sms file):** [https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/hierarchy/the-content-library](https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/hierarchy/the-content-library)
+
 
 
 # Other References
