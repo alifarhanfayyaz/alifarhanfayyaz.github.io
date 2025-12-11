@@ -104,6 +104,8 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/farhan-fayyaz-ali/"
+    - label: "Resume"
+      url: /assets/Farhan_Ali.pdf
 
 # social:
 #   type:  # Person or Organization (defaults to Person)
