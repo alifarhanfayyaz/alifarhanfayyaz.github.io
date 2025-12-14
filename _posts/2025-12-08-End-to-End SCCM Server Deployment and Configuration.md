@@ -325,7 +325,7 @@ Ran **Splash.hta**, installed a Primary Site.
 
   ![](/assets/3/sccm_installation_completed.png)
 
-  ![](/assets/3/sccm_installation_completed.png)
+  ![](/assets/3/sccm_installation_2.png)
 
 * Set **CMTrace.exe** as default log viewer and copy it from source file to a different location so CM updates don’t interfere with its functionality.
 
