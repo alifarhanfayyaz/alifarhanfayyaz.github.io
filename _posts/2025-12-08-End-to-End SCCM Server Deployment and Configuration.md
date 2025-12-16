@@ -21,7 +21,7 @@ I have divided the project into four major steps:
 3. Prepare FA-SCCM for SCCM Installation  
 4. Install System Center Configuration Manager
 
-Post-configuration tasks (boundaries, discovery methods, clients etc.) are documented separately: [https://alifarhanfayyaz.github.io/infrastructure/SCCM-Post-Installation-Configuration/]
+Post-configuration tasks (boundaries, discovery methods, clients etc.) are documented separately: [Access Here](https://alifarhanfayyaz.github.io/infrastructure/SCCM-Post-Installation-Configuration/)
 
 **Infrastructure Components:**
 
