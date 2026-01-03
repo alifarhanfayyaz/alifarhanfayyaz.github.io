@@ -90,7 +90,7 @@ Navigate to Microsoft Entra admin center → Entra ID → Devices → Device Set
 
 ## Create Groups for Autopilot
 
-When configuring autopilot targeting, groups enable administrators to apply specific configurations, policies, and applications to different sets of devices or users based on organizational need. I handle this by creating two security groups, a user group to manage autopilot administration permissions and a device group that specifies target devices for autopilot.
+When configuring autopilot targeting, groups enable administrators to apply specific configurations, policies, and applications to different sets of devices or users based on organizational need. I handle this by creating two security groups, a user group to manage autopilot administration permissions and a dynamic device group that specifies target devices for autopilot.
 
 1. **Autopilot Administrators**  
 2. **All Windows 11 Devices**
@@ -111,13 +111,23 @@ Check the box “Azure AD roles can be assigned to this group”
 
 Add users who will be administering autopilot device preparation to the group. I added myself to the group for this lab.
 
-### Create a Device Group
+### Create a Dynamic Device Group
 
-Created a security group for all Windows 11 devices which will later be used to define scope for Intune.
+I created a dynamic device group that will later be used to define the scope for Intune assignments. The group is configured to automatically include all Windows Autopilot devices using the following dynamic membership rule:
 
-Navigate to Microsoft Intune admin center \-\> Groups \-\> All groups \-\> New group
+```(device.devicePhysicalIDs \-any (\_ \-contains "\[ZTDId\]"))```
 
-![](/assets/5/windows_11_devices_group.png)
+This rule adds any device that contains a ZTDId (Zero Touch Deployment ID) to the group. The ZTDId is automatically assigned by Microsoft when a device is registered with Windows Autopilot, making this a reliable way to identify all Autopilot-managed devices.
+
+Navigate to **Microsoft Intune admin center \-\> Groups \-\> All groups \-\> New group**
+
+![](/assets/5/dynamic_autopilot_group1.png)
+
+Configured the dynamic rule
+
+![](/assets/5/dynamic_autopilot_group2.png)
+
+Validated the dynamic membership rule to confirm that it’s working as expected
 
 ## Create Custom Role for Autopilot Administration
 
@@ -252,7 +262,7 @@ Checked following options under settings and left the rest as default:
 
 ![](/assets/5/esp_3-1.png)
 
-Add the **All Windows 11 Devices** under assignments
+Add the **All Windows 11 Devices** group under assignments
 
 **![](/assets/5/esp_3.png)**
 
@@ -430,12 +440,6 @@ This prevents the device from being registered or joined to Microsoft Entra ID o
 ![](/assets/5/device_register7.png)
 
 After uploading the hash, navigate to Microsoft Intune admin center \-\> Devices \-\> Windows \-\> Enrollment \-\> Devices under Windows Autopilot to verify deployment profile assignment.
-
-The profile status says “Not assigned” because I haven’t added the device to the **All Windows 11 Devices** group which is configured to automatically assign the deployment profile.
-
-![](/assets/5/device_register8.png)
-
-Added the device to the **All Windows 11 Devices** group and the deployment profile status changed to “Assigned”.
 
 ![](/assets/5/device_register9.png)
 
