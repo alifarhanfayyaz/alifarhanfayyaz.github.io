@@ -83,7 +83,7 @@ Navigate to Microsoft Entra admin center \-\> Mobility \-\> MDM user scope
 
 Select “Some” and add the **Corporate Users** group to the MDM scope.
 
-![](/assets/6/mdm_scope_2.png)
+![](/assets/6/.png)
 
 ### Allow users to join devices to Microsoft Entra ID
 
@@ -221,11 +221,11 @@ Navigate to **Windows Autopilot Administrator \-\> Assignments**
 
 ![](/assets/6/custome_role_0.png)
 
-Named the assignment **Windows Autopilot Device Preparation Admins** 
+I named the assignment **Windows Autopilot Device Preparation Admins** 
 
 ![](/assets/6/custome_role.png) 
 
-Add the **Autopilot Administrators** group under admin groups
+Add the **Autopilot Administrators** group - containing users responsible for administering Windows Autopilot device preparation - under Admin groups
 
 ![](/assets/6/custome_role1.png) 
 
@@ -247,7 +247,7 @@ Create a new user driven policy
 
 ![](/assets/6/windows_prep2.png) 
 
-Name it **Windows11\_Corporate**
+I named it **Windows11\_Corporate**
 
 ![](/assets/6/windows_prep3.png) 
 
@@ -265,7 +265,8 @@ Configure configuration settings:
 
 ![](/assets/6/windows_prep8.png) 
 
-Add the **Corporate Users** group in Assignments tab  
+Add the **Corporate Users** group in Assignments tab 
+ 
 ![](/assets/6/windows_prep9.png) 
 
 ![](/assets/6/windows_prep10.png) 
